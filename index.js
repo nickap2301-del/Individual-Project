@@ -1,17 +1,32 @@
-async function main() {
-    const title = await fetch("https://www.omdbapi.com/?i=tt3896198&apikey=74533644&s=fast");
-    const titleData = await title.json();
-   const x = `<div class="moives_container">
-                        <div class="moive">
-                        <h3></h3>
-                        <figure class="moive__poster--warpper"><b><!--Poster:--></b><a href="https://m.media-amazon.com/images/M"/></figure>
-                        <p><b>Title:</b> Title</p>
-                        <p><b>Type:</b> 00000000000000</p>
-                        <p><b>Year:</b> 0000</p>
-                        <p><b>imdbID:</b> 000000000</p>
-                      </div>
-                      </div>`
-}
+const searchInput = document.querySelector("#search-bar");
+const resultsEl = document.querySelector(".moives__container");
 
-main();
+console.log(resultsEl);
+
+async function fetchMovies() {
+  const search = searchInput.value;    
+  const response = await fetch(
+    `https://www.omdbapi.com/?i=tt3896198&apikey=74533644&s=${search.length > 0 ? search : "fast"}`,
+   );
+   const movieData = await response.json();
+   console.log(movieData);  
+    resultsEl.innerHTML = movieData.Search.map(movie => movieHTML(movie));
+    }
+
+function movieHTML(movie) {
+    return `
+    <div class="moives_container">
+    <div class="moive">
+    <h3>${movie.Title}</h3>
+    <figure class="moive__poster--warpper"><b><!--Poster:--></b>
+   <img src="${movie.Poster}"/>
+    </figure>
+    <p><b>Title:</b> ${movie.Title}</p>
+    <p><b>Type:</b> ${movie.Type}00000000000000</p>
+    <p><b>Year:</b> ${movie.Year}</p>
+    <p><b>imdbID:</b>${movie.imdbiD}</p>
+    </div>
+    </div>`;
+}
+fetchMovies();
 

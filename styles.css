@@ -209,7 +209,7 @@ h1 {
     justify-content: space-between;
     align-items: center;
     padding: 0 24px;
-    margin:  24px 0 0 0; 
+    margin:  24px 0 24px 0; 
    } 
 
    select {
@@ -226,7 +226,7 @@ h1 {
     border-image: none;
     outline: none;
     padding: 0px 16px;
-}
+ }
 .movie {
     width: 25%;
     display: flex;
@@ -235,9 +235,14 @@ h1 {
     padding: 24px;
 }
 
-.moive__poster--warpper {
+.movie__poster--warpper {
     margin-bottom: 8px;
     display: flex;
     border-radius: 4px;
     overflow: hidden;
+}
+
+movies__container {
+    padding: 56px 0px;
+
 }
