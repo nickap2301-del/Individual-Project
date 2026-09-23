@@ -227,6 +227,16 @@ h1 {
     outline: none;
     padding: 0px 16px;
  }
+.row { 
+     width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+ .movies {
+    display: flex;
+    flex-direction: wrap;
+ }
 .movie {
     width: 25%;
     display: flex;
@@ -235,14 +245,24 @@ h1 {
     padding: 24px;
 }
 
+/*.movie__img {
+    max-height: 380px;
+    cursor: not-allowed;
+    object-fit: contain;
+    object-position: left center;
+    transition: 300ms;
+}
+*/
+
 .movie__poster--warpper {
     margin-bottom: 8px;
     display: flex;
     border-radius: 4px;
     overflow: hidden;
+
 }
 
-movies__container {
+.movies__container {
     padding: 56px 0px;
 
 }

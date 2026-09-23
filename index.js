@@ -1,5 +1,5 @@
 const searchInput = document.querySelector("#search-bar");
-const resultsEl = document.querySelector(".moives__container");
+const resultsEl = document.querySelector(".movies__container");
 
 console.log(resultsEl);
 
@@ -15,10 +15,10 @@ async function fetchMovies() {
 
 function movieHTML(movie) {
     return `
-    <div class="moives_container">
-    <div class="moive">
+    <div class="movies__container">
+    <div class="movie">
     <h3>${movie.Title}</h3>
-    <figure class="moive__poster--warpper"><b><!--Poster:--></b>
+    <figure class="movie__poster--warpper"><b><!--Poster:--></b>
    <img src="${movie.Poster}"/>
     </figure>
     <p><b>Title:</b> ${movie.Title}</p>
