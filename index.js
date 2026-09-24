@@ -16,15 +16,17 @@ async function fetchMovies() {
 function movieHTML(movie) {
     return `
     <div class="movies__container">
+    <div class="movies">
     <div class="movie">
     <h3>${movie.Title}</h3>
     <figure class="movie__poster--warpper"><b><!--Poster:--></b>
-   <img src="${movie.Poster}"/>
+    <img class="movie__img" src="${movie.Poster}" alt="${movie.Title}" />
     </figure>
     <p><b>Title:</b> ${movie.Title}</p>
     <p><b>Type:</b> ${movie.Type}00000000000000</p>
     <p><b>Year:</b> ${movie.Year}</p>
     <p><b>imdbID:</b>${movie.imdbiD}</p>
+    </div>
     </div>
     </div>`;
 }
