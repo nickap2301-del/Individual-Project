@@ -34,48 +34,50 @@
             <div class="container">
               <div class="row">
                 <div class="movies__header">
-                    <h1>Browse for Movies</h1>
-                    <div class="search-bar">
-                      <input
-                        type="text"
-                        class="search-bar input"
-                        placeholder="Search for Movie."
-                        id="search-bar" 
-                      />
-                      <button class="search-bar__button" onclick="fetchMovies()">Search</button>
-                    </div>
-                     <div class="movies__titles">
-                      <h2 class="movies__title">All Movies</h2>
-                      <select id="filter">
-                        <option value="" disabled selected>Sort By:</option>
-                        <option value="Title A to Z">Title A to Z</option>
-                        <option value="Title Z to A">Title Z to A</option>
-                        <option value="Rated">Rated</option>
-                        <option value="Released Date">Released Data</option>
-                        <option value="Genre">Genre</option>
-                      </select>
-                     </div>
-                      <div class="movies__container">
-                        <div class="row">
-                          <div class="movies">
+                  <h1>Browse for Movies</h1>
+                  <div class="search-bar">
+                    <input
+                      type="text"
+                      class="search-bar input"
+                      placeholder="Search for Movie."
+                      id="search-bar"
+                    />
+                    <button class="search-bar__button" onclick="fetchMovies()">
+                      Search
+                    </button>
+                  </div>
+                  <div class="movies__titles">
+                    <h2 class="movies__title">All Movies</h2>
+                    <select id="filter">
+                      <option value="" disabled selected>Sort By:</option>
+                      <option value="Title A to Z">Title A to Z</option>
+                      <option value="Title Z to A">Title Z to A</option>
+                      <option value="Rated">Rated</option>
+                      <option value="Released Date">Released Data</option>
+                      <option value="Genre">Genre</option>
+                    </select>
+                  </div>
+                  <div class="movies__container">
+                    <div class="row">
+                      <div class="movies">
                         <div class="movie">
-                        
-                        <figure class="movie__poster--warpper">
-                          <b><!--Poster:--></b>
-                        <img class="movie__img" 
-                        src="https://m.media-amazon.com/images/M/MV5BZGRiMDE1NTMtMThmZS00YjE4LWI1ODQtNjRkZGZlOTg2MGE1XkEyXkFqcGc@._V1_SX300.jpg" alt=""/>
-                        </figure>
-                        
-                        <p><b>Title:</b> Title</p>
-                        <p><b>Type:</b> 00000000000000</p>
-                        <p><b>Year:</b> 0000</p>
-                        <p><b>imdbID:</b> 000000000</p>
+                          <figure class="movie__poster--warpper">
+                            <b><!--Poster:--></b>
+                            <img
+                              class="movie__img"
+                              src="https://m.media-amazon.com/images/M/MV5BZGRiMDE1NTMtMThmZS00YjE4LWI1ODQtNjRkZGZlOTg2MGE1XkEyXkFqcGc@._V1_SX300.jpg"
+                              alt=""
+                            />
+                          </figure>
+
+                          <p><b>Title:</b></p>
+                          <p><b>Type:</b></p>
+                          <p><b>Year:</b></p>
+                          <p><b>imdbID:</b></p>
+                        </div>
                       </div>
-                      </div>
-                      </div>
-                      </div>
-                    
-                  
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
