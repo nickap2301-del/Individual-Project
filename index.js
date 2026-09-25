@@ -21,13 +21,14 @@ function movieHTML(movie) {
     <figure class="movie__poster--warpper"><b><!--Poster:--></b>
     <img class="movie__img" src="${movie.Poster}" alt="${movie.Title}" />
     </figure>
-    <p><b>Title:</b> ${movie.Title}</p>
-    <p><b>Type:</b> ${movie.Type}</p>
-    <p><b>Year:</b> ${movie.Year}</p>
-    <p><b>imdbID:</b>${movie.imdbiD}</p>
+    <p><b>Title:</b>  ${movie.Title}</p>
+    <p><b>Type:</b>   ${movie.Type}</p>
+    <p><b>Year:</b>   ${movie.Year}</p>
+    <p><b>imdbID:</b> ${movie.imdbiD}</p>
     </div>
     </div>
     </div>`;
 }
+
 fetchMovies();
 
