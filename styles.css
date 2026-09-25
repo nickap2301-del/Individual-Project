@@ -235,15 +235,10 @@ h1 {
 
 /* 
 
-LIST
+MOVIES LIST
 
 */
 
-.movies__container {
-    padding: 0px 0px;
-    display: flex;
-    flex-wrap:wrap;
-}
 .row { 
   width: 100%;
   max-width: 1200px;
@@ -259,9 +254,8 @@ flex-wrap: wrap;
     width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    
-}
+    justify-content: center;
+ }
 
 .movie__img {
     width: 100%;
@@ -273,6 +267,11 @@ flex-wrap: wrap;
 }
 .movies__container {
     padding: 56px 0px;
+    align-content: space-around;
+    justify-content: space-around;
+    display: flex;
+    flex-wrap:wrap;
+
 }
 .movie__poster--warpper {
     margin-bottom: 8px;
