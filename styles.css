@@ -11,6 +11,12 @@ body{
     overflow-x: hidden;
 }
 
+.background__img {
+    height: 140px;
+    width: 140px;
+
+}
+
 
 /* NAVBAR */
 
@@ -63,6 +69,7 @@ a {
 /*logo end*/
 
 
+
 /* Links */
 
 .nav__row {
@@ -74,7 +81,8 @@ a {
     display: flex;
     align-items: center;
     padding-bottom: 2px;
-}.nav__link {
+}
+.nav__link {
     margin: 0 24px;
 }
 .nav__link {
@@ -118,7 +126,7 @@ a {
   transition: all 300ms ease;
 }
 
-.nav__link--primary:after {
+.nav__link--primary::after {
     content: "";
     width: 0;
     height: 0;
@@ -173,6 +181,17 @@ h1 {
     transition: all 300ms ease;
 }
 
+.search-bar__button:after {
+    content: "";
+    width: 0;
+    height: 0;
+}
+
+.search-bar__button:hover {
+    background-color: rgb(203, 31, 31);
+    color: white;
+}
+
 .search-bar input {
   width: 100%;
   color: rgb(14, 90, 171);
@@ -204,6 +223,8 @@ h1 {
   z-index: 100;
   box-shadow: 0 12px 30px 0 rgba(0, 0, 0, 0.2);
     }
+    
+    /* sort by */
  
     select {
     background-color: rgb(255, 255, 255);
@@ -259,7 +280,6 @@ display: flex;
 flex-wrap: wrap;
 }
 
-
 .movie {
     width: 80%;
     margin:auto;
@@ -283,4 +303,64 @@ flex-wrap: wrap;
     object-fit: contain;
     object-position: left center;
     transition: all 300ms ease;
+}
+
+/*
+Footer
+*/
+
+footer {
+    background-color: #e2dfdf;
+}
+
+.footer__container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.footer__logo {
+    display: flex;
+    align-items: center;
+    padding-bottom: 4px;
+    margin: 8px 0px;
+}
+
+.footer__logo--img {
+    color: rgb(228, 235, 235);
+    font-size: 40px;
+    font-weight: bold;
+    width: 140px;
+    height: 50px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer__links {
+    display: flex;
+    align-items: center;
+    padding-bottom: 2px;
+}
+
+.footer__link {
+    margin: 0 24px;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 4px;
+    letter-spacing: 0.35px;
+    border-bottom: 2px solid transparent;
+    position: relative;
+    transition: all 300ms;
+}
+
+.footer__link--primary::after {
+    content: "";
+    width: 0;
+    height: 0;
 }
