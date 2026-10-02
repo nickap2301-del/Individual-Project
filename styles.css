@@ -146,6 +146,15 @@ a {
     color: white;
 }
 
+
+.btn__menu {
+  background-color: transparent;
+  font-size: 40px;
+  border: none;
+  color: #ffff;
+  display: none;
+}
+
 .container {
     padding: 40px 0 24px;
 }
@@ -235,7 +244,7 @@ h1 {
     
     /* sort by */
  
-    select {
+ select {
     background-color: rgb(255, 255, 255);
     color: rgb(1, 0, 0);
     height: 40px;
@@ -411,7 +420,7 @@ display: block;
 }
 
 .fa-spinner {
-animation: rolate 600ms infinite linear;
+animation: rotate 600ms infinite linear;
 }
 
 @keyframes rotate {
@@ -420,7 +429,7 @@ animation: rolate 600ms infinite linear;
     }
 
     100% {
-        transform: rotale(360deg);
+        transform: rotate(360deg);
     }
 }
 

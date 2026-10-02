@@ -2,22 +2,29 @@ const searchInput = document.querySelector("#search-bar");
 const resultsEl = document.querySelector(".movies__container");
 const filter = document.querySelector("#filter");
 
-document.body.classList += ` movie__loading`
-const movie = await getMovie();
-document.body.classList.remove() ` movie__loading`
-
 console.log(resultsEl);
 
 async function fetchMovies(event) {
   if(event) {
     event.preventDefault();
   }
-  const search = searchInput.value;    
+  const search = searchInput.value || "fast";
+  
+  document.body.classList.add('movie__loading');
+
   const response = await fetch(
-   `https://www.omdbapi.com/?apikey=74533644&s=${search.length > 0 ? search : "fast"}`
+   `https://www.omdbapi.com/?apikey=74533644&s=${search}`
    );
    const movieData = await response.json();
+
+  document.body.classList.remove('movie__loading');
+
    console.log(movieData);  
+
+ if (!movieData.Search) {
+  resultsEl.innerHTML = "<p>No movies found. Try another search!</p>";
+  return;
+}
    
 let movies = movieData.Search;
 
@@ -55,9 +62,8 @@ function movieHTML(movie) {
     <p><b>Year:</b>   ${movie.Year}</p>
     <p><b>imdbID:</b> ${movie.imdbID}</p>
     </div>
-    </div>
     </div>`;
 }
 filter.addEventListener("change", fetchMovies);
-fetchMovies(console.log(filter.value));
+fetchMovies();
 
