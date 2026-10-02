@@ -40,6 +40,13 @@ a {
 }
 
 
+.btn__menu {
+  background-color: transparent;
+  font-size: 40px;
+  border: none;
+  color: #fff;
+  display: none;
+}
 /* logo */
 .nav__logo {
     display: flex;

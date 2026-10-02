@@ -3,7 +3,10 @@ const resultsEl = document.querySelector(".movies__container");
 
 console.log(resultsEl);
 
-async function fetchMovies() {
+async function fetchMovies(event) {
+  if(event) {
+    event.preventDefault();
+  }
   const search = searchInput.value;    
   const response = await fetch(
    `https://www.omdbapi.com/?apikey=74533644&s=${search.length > 0 ? search : "fast"}`
