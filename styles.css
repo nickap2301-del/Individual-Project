@@ -421,8 +421,6 @@ animation: rolate 600ms infinite linear;
     }
 }
 
-
-
 /* SMALL PHONES, TABLETS, LARGE SMARTPHONES */
 @media (max-width: 768px) {
   .header__description {

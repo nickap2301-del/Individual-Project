@@ -1,5 +1,6 @@
 const searchInput = document.querySelector("#search-bar");
 const resultsEl = document.querySelector(".movies__container");
+const filter = document.querySelector("#filter");
 
 console.log(resultsEl);
 
@@ -33,6 +34,6 @@ function movieHTML(movie) {
     </div>
     </div>`;
 }
-
+filter.addEventListener("change", fetchMovies);
 fetchMovies();
 
