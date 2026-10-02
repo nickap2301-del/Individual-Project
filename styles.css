@@ -5,19 +5,15 @@
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
 }
-#landing {
-    background-image: url("./assets/df421e21-c46a-4d3f-bd58-32d456af593e.jpeg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
+
 body{
   height: 5px;
   padding: 0;
   max-width: 100vw;
   overflow-x: hidden;
- background-size: cover;
-  background-position: center;
+  background-image: url("./assets/df421e21-c46a-4d3f-bd58-32d456af593e.jpeg");
+  background-size: 200% 260px;
+  background-position: top center;
   background-repeat: no-repeat;
 }
 
