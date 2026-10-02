@@ -5,7 +5,12 @@
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
 }
-
+#landing {
+    background-image: url("./assets/df421e21-c46a-4d3f-bd58-32d456af593e.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 body{
   height: 5px;
   padding: 0;
@@ -140,7 +145,7 @@ a {
 }
 
 .container {
-    padding: 96px 0;
+    padding: 40px 0 24px;
 }
 h1 {
     font-size: 36px;
@@ -249,6 +254,7 @@ h1 {
  }
 
 .movies__titles {
+    background-color: #fff;
     padding:  0 100px;
     margin:  24px 0 24px 0; 
     display: flex;
@@ -278,6 +284,7 @@ row {
 }
 
 .movies {
+background-color: #fff;
 display: flex;
 flex-wrap: wrap;
 }
