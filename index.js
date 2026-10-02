@@ -2,6 +2,10 @@ const searchInput = document.querySelector("#search-bar");
 const resultsEl = document.querySelector(".movies__container");
 const filter = document.querySelector("#filter");
 
+document.body.classList += ` movie__loading`
+const movie = await getMovie();
+document.body.classList.remove() ` movie__loading`
+
 console.log(resultsEl);
 
 async function fetchMovies(event) {
@@ -14,11 +18,31 @@ async function fetchMovies(event) {
    );
    const movieData = await response.json();
    console.log(movieData);  
-   resultsEl.innerHTML = movieData.Search
+   
+let movies = movieData.Search;
+
+if (filter.value === "Title A to Z") {
+  movies.sort((a, b) => a.Title.localeCompare(b.Title));
+}
+
+if (filter.value === "Title Z to A") {
+  movies.sort((a, b) => b.Title.localeCompare(a.Title));
+}
+
+if (filter.value === "Year Newest") {
+  movies.sort((a, b) => Number(b.Year) - Number(a.Year));
+}
+
+if (filter.value === "Year Oldest") {
+  movies.sort((a, b) => Number(a.Year) - Number(b.Year));
+}
+
+   resultsEl.innerHTML = movies
   .map((movie) => movieHTML(movie))
   .join("");
    }
 
+   
 function movieHTML(movie) {
     return `
     <div class="movies">
@@ -35,5 +59,5 @@ function movieHTML(movie) {
     </div>`;
 }
 filter.addEventListener("change", fetchMovies);
-fetchMovies();
+fetchMovies(console.log(filter.value));
 

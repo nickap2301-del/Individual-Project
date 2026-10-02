@@ -172,8 +172,8 @@ h1 {
     height: 68px;
     position: relative;
     display: flex;
-     justify-content: end;
-     margin: 0 auto;
+    justify-content: end;
+    margin: 0 auto;
 }
 
 .search-bar__button {
@@ -405,6 +405,9 @@ Loading Page
     padding-top: 60px;
     font-size: 60px;
     color: #6415ff;
+}
+.movie__loading .movie__loading--sprinner {
+display: block;
 }
 
 .fa-spinner {
