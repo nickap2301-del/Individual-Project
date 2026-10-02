@@ -144,8 +144,9 @@ ul {
 
 
 .btn__menu {
-  display: block;
-background-color: transparent;
+  display:flex;
+    display: block;
+  background-color: transparent;
   font-size: 40px;
   border: none;
   color: #ffff;
