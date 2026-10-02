@@ -24,6 +24,10 @@ a {
     display: inline;
     text-decoration: none;
 }
+
+ul {
+    display: flex;
+}
 .nav {
     height: 80px;
     display: flex;
@@ -39,14 +43,6 @@ a {
     margin: 0 auto;
 }
 
-
-.btn__menu {
-  background-color: transparent;
-  font-size: 40px;
-  border: none;
-  color: #fff;
-  display: none;
-}
 /* logo */
 .nav__logo {
     display: flex;
@@ -148,12 +144,15 @@ a {
 
 
 .btn__menu {
-  background-color: transparent;
+  display: block;
+background-color: transparent;
   font-size: 40px;
   border: none;
   color: #ffff;
-  display: none;
+  
 }
+
+
 
 .container {
     padding: 40px 0 24px;
