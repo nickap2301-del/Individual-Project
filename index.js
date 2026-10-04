@@ -25,7 +25,15 @@ async function fetchMovies(event) {
   resultsEl.innerHTML = "<p>No movies found. Try another search!</p>";
   return;
 }
-   
+
+function openMenu() {
+  document.body.classList =+ "  menu--open"
+}
+
+function closeMenu() {
+  document.body.classList.remove('menu--open')
+}
+
 let movies = movieData.Search;
 
 if (filter.value === "Title A to Z") {

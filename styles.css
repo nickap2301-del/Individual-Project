@@ -144,16 +144,54 @@ ul {
 
 
 .btn__menu {
-  display:flex;
-    display: block;
+  display: none;
   background-color: transparent;
   font-size: 40px;
   border: none;
-  color: #ffff;
-  
+  color: #ffffff;
+  display: none;
+ }
+
+ .menu__backdrop {
+position: absolute;
+background-color: #000000;
+top: 0;
+left: 0;
+right: 0s;
+bottom: 0;
+z-index: 100;
+display: flex;
+justify-content: center;
+align-items: center;
+display: none;
+transition: opacity 300ms ease;
+opacity: 0;
+visibility: hidden;
+ }
+
+ .menu-open .menu__backdrop {
+ visibility: visible;
+ opacity: 1;
 }
 
+.menu-open {
+    max-height: 100vh;
+    overflow-x: hidden;
+}
 
+ .btn__menu--close {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  padding: 8px;
+  color: white;
+}
+.menu__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+}
 
 .container {
     padding: 40px 0 24px;
@@ -243,7 +281,14 @@ h1 {
     }
     
     /* sort by */
- 
+ .movies__titles {
+    background-color: #fff;
+    padding:  0 100px;
+    margin:  24px 0 24px 0; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   }
  select {
     background-color: rgb(255, 255, 255);
     color: rgb(1, 0, 0);
@@ -307,7 +352,7 @@ flex-wrap: wrap;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-     }
+    }
 .movie__poster--warpper {
     height: 380px;
     margin-bottom: 8px;
@@ -439,39 +484,26 @@ animation: rotate 600ms infinite linear;
     padding: 0 24px;
   }
 
-  h1 {
-    font-size: 40px;
-  }
-
-  h2 {
-    font-size: 26px;
+  
+  .movies__title {
+    display: flex;
   }
 
   button {
     font-size: 18px;
   }
-
-  .book {
-    width: 50%;
-  }
+  
 }
 
 
 /* SMALL PHONES, LARGE SMARTPHONES */
 @media (max-width: 550px) {
-  .btn__menu {
-    display: block;
-  }
-
-  .nav__links {
+   .menu_list {
     display: none;
   }
 
-  .highlight {
-    width: 100%;
-  }
-
-  .highlight:not(:last-child) {
-    margin-bottom: 24px;
-  }
+  .btn__menu {
+    display: block;
+  }     
 }
+ 
