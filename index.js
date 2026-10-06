@@ -26,14 +26,6 @@ async function fetchMovies(event) {
   return;
 }
 
-function openMenu() {
-  document.body.classList =+ "  menu--open"
-}
-
-function closeMenu() {
-  document.body.classList.remove('menu--open')
-}
-
 let movies = movieData.Search;
 
 if (filter.value === "Title A to Z") {
@@ -56,6 +48,14 @@ if (filter.value === "Year Oldest") {
   .map((movie) => movieHTML(movie))
   .join("");
    }
+
+function openMenu() {
+  document.body.classList.add("menu--open")
+}
+
+function closeMenu() {
+  document.body.classList.remove("menu--open");
+}
 
    
 function movieHTML(movie) {
