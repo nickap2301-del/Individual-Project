@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 * {
     box-sizing:border-box;
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
+}
+
+.menu__link{
+    color: #fff;
 }
 
 body{
@@ -147,10 +153,11 @@ ul {
   display: flex;
 flex-direction: column;
   background-color: transparent;
-  font-size: 40px;
+  font-size: 50px;
   border: none;
   color: #fff;
   display: none;
+  cursor: pointer;
  }
  .menu__backdrop  {
 position: absolute;
@@ -160,6 +167,7 @@ left: 0;
 right: 0s;
 bottom: 0;
 z-index: 100;
+font-family: 'Courier New', Courier, monospace;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -177,9 +185,13 @@ visibility: hidden;
 
 
  .menu--open .menu__backdrop {
- display: flex;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    display: flex;
     visibility: visible;
- opacity: 1;
+    opacity: 1;
 }
 
 .menu--open {
@@ -193,7 +205,7 @@ visibility: hidden;
   right: 20px;
   top: 10px;
   padding: 39px;
-  color: rgb(250, 250, 250);
+  color: rgb(255, 255, 255);
 }
 .menu__list {
     display: flex;
@@ -293,10 +305,10 @@ h1 {
     /* sort by */
  .movies__titles {
     background-color: #fff;
-    padding:  0 100px;
+    padding:  10px 100px; 
     margin:  24px 0 24px 0; 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
     align-items: center;
    }
  select {
@@ -508,8 +520,8 @@ animation: rotate 600ms infinite linear;
 
 /* SMALL PHONES, LARGE SMARTPHONES */
 @media (max-width: 550px) {
-   .menu_list {
-    display: none;
+   .nav__links {
+    display: none; 
   }
 
   .btn__menu {
