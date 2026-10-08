@@ -72,6 +72,8 @@ function movieHTML(movie) {
     </div>
     </div>`;
 }
+document.querySelector(".search-bar").addEventListener("submit", fetchMovies);
+
 filter.addEventListener("change", fetchMovies);
 fetchMovies();
 
